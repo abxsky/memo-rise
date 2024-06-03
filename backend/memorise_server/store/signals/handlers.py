@@ -11,3 +11,5 @@ def create_customer_for_new_user(sender, instance, created, **kwargs):
                 Customer.objects.create(user=instance)
         except Exception as e:
             print(f"Erreur pour la creéation de l'utilisateur {instance}: {e}")
+
+

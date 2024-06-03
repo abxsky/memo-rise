@@ -30,7 +30,7 @@ class BookAdmin(admin.ModelAdmin):
     list_per_page = 10
     
     autocomplete_fields = ['category']
-    search_fields = ['title__istartswith', 'category__title__istartswith', 'author_name__istartswith']
+    search_fields = ['title__istartswith', 'category__title__istartswith', 'author__name__istartswith']
     prepopulated_fields = {
         'slug':['title']
     }

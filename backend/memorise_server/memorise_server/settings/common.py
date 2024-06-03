@@ -144,9 +144,15 @@ INTERNAL_IPS = [
     # ...
 ]
 
-CORS_ALLOWED_ORIGINs = [
-    'http://127.0.0.1:8001'
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS_ALLOWED_ORIGINs = [
+#     'http://127.0.0.1:55990/',
+#     'http://localhost:8001',
+#     'http://localhost:55990'
+# ]
+
+
 REST_FRAMEWORK = {
     'COERCE_DECIMAL_TO_STRING' : False,
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -166,6 +172,7 @@ AUTH_USER_MODEL = 'core.User'
 
 DJOSER = {
     'SERIALIZERS': {
+        'REGISTER_URL': 'auth/users/',
         'user_create':'core.serializers.UserCreateSerializer',
         'current_user':'core.serializers.UserSerializer',
     }

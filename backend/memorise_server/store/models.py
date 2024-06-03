@@ -77,8 +77,8 @@ class Customer(models.Model):
     def __str__(self) -> str:
         return self.user.first_name + ' ' + self.user.last_name
     
-    phone = models.DecimalField(decimal_places = 0, max_digits= 15, default=0, verbose_name='téléphone')
-    birth_date = models.DateField(verbose_name='date de naissance')
+    phone = models.DecimalField(null=True, blank=True, decimal_places = 0, max_digits= 15, default=0, verbose_name='téléphone')
+    birth_date = models.DateField(null=True, blank=True, verbose_name='date de naissance')
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     
     @admin.display(ordering='user__first_name')
