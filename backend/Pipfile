@@ -5,8 +5,23 @@ name = "pypi"
 
 [packages]
 django = "*"
+mysqlclient = "*"
+django-debug-toolbar = "*"
+python-gettext = "*"
+djangorestframework = "*"
+drf-nested-routers = "*"
+django-filter = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
+pillow = "*"
+django-cors-headers = "*"
+gunicorn = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-django = "*"
+pytest-watch = "*"
+locust = "*"
 
 [requires]
 python_version = "3.12"
